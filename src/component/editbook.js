@@ -27,7 +27,7 @@ function Editbook() {
            
           />
           </div>
-           <div className="flex flex-nowrap gap-2 pl-[45%] pr-3">
+           <div className="flex flex-nowrap gap-2 pl-[60%] pr-6">
           <button className="border border-blue-gray-500 text-blue-gray-500 rounded px-3 py-1">
             Cancel
           </button>
