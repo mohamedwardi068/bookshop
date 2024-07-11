@@ -1,6 +1,14 @@
-import React from 'react';
-import Logo from './logo.png';
+import React, { useState } from 'react';
+import Logo from './Logo/logo.png';
 function Navbar() {
+  const [search,setSearch]=useState("")
+  
+  const fct=()=> {
+    return console.log("search",search)
+  }
+  const handlechange=(aaaa)=> {
+    setSearch(aaaa.target.value)
+  }
   return (
     <div className="mx-auto max-w-screen-3xl px-4 py-3 text-white bg-blue-500">
       <div className="flex flex-wrap items-center justify-between gap-y-4">
@@ -10,8 +18,10 @@ function Navbar() {
             type="search"
             placeholder="Type here..."
             className="pr-20 pl-4 py-2 bg-blue-500 text-white rounded-lg min-w-[288px] border border-white"
+            value={search}
+            onChange={handlechange}
           />
-          <button className="absolute right-1 top-1 bg-white text-black rounded px-3 py-1">
+          <button  className="absolute right-1 top-1 bg-white text-black rounded px-3 py-1" onClick={fct}>
             Search
           </button>
         </div>

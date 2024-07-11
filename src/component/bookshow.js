@@ -13,7 +13,7 @@ function Bookshow() {
                 alt="card-image"
                 className="h-full w-full object-cover"
               />
-            </div>
+            </div> <br></br>
             <div>
               <div className="mb-2 flex items-center justify-between">
                 <p color="blue-gray" className="font-medium ml-1">
@@ -38,7 +38,7 @@ function Bookshow() {
               >
                 Add to Cart
               </button>
-              <p color="blue-gray" className="font-medium ">
+              <p color="blue-gray" className="font-medium  pr-3">
                   $95.00
             </p>
             </div>
