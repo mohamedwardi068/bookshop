@@ -1,50 +1,60 @@
-import React from 'react'
-
+import React, { useState } from 'react';
 
 function Editbook() {
+  const [submit, setSubmit] = useState("");
+  const [submitr, setSubmitr] = useState("");
+  const [submittt, setSubmittt] = useState("");
+
+  const submitt = () => {
+    return console.log("submitting", submit, ";", submitr, ";", submittt);
+  }
+
+  const handlechange = (e) => {
+    setSubmit(e.target.value);
+  }
+
+  const handlechangee = (e) => {
+    setSubmitr(e.target.value);
+  }
+
+  const handlechangeee = (e) => {
+    setSubmittt(e.target.value);
+  }
+
   return (
     <>
-    < div className= " block items-center  border-4 border-sky-500 rounded  mt-4 ml-4 h-[40%] w-[40%]  " >
-    <div className=' grid grid-cols-1 grid-rows-1 pl-3 pr-3 py-2'>
-    <input
-            type="search"
+      <div className="block items-center border-4 border-sky-500 rounded mt-7 h-[50%] w-[90%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[30%] mx-auto bg-cover bg-center" style={{ backgroundImage: 'url("https://media.istockphoto.com/id/470721440/vector/books-seamless-pattern.jpg?s=2048x2048&w=is&k=20&c=-o40Z7Vj8uC7kqfEEd-cOjAbFxTlM_ZWeYD8swN4Mp0=")' }}>
+        <div className='grid grid-cols-1 gap-4 p-5 bg-opacity-75 rounded'>
+          <input
+            type="text"
             placeholder="Bookname..."
-            className="pl-2 pr-2 py-2 bg-center bg-blue-500 text-white rounded-lg min-w-[40%] border border-white"
-            
+            className="pl-1 pr-1 py-2 border-2 bg-transparent text-black rounded-lg w-full  border-blue-500"
+            onChange={handlechange}
           />
-     
           <input
-            type="search"
-            placeholder="Price  ..."
-            className="pl-1 pr-1 py-2 bg-center bg-blue-500 text-white rounded-lg min-w-[40%] border border-white"
-           
+            type="text"
+            placeholder="Price..."
+            className="pl-1 pr-1 py-2 border-2 bg-transparent text-black rounded-lg w-full  border-blue-500"
+            onChange={handlechangee}
           />
-      
           <input
-            type="search"
+            type="text"
             placeholder="Quantity..."
-            className="pl-1 pr-1 py-2 bg-center bg-blue-500 text-white rounded-lg min-w-[40%] border border-white"
-           
+            className="pl-1 pr-1 py-2 border-2 bg-transparent text-black rounded-lg w-full  border-blue-500"
+            onChange={handlechangeee}
           />
-          </div>
-           <div className="flex flex-nowrap gap-2 pl-[60%] pr-6">
-          <button className="border border-blue-gray-500 text-blue-gray-500 rounded px-3 py-1">
+        </div>
+        <div className="flex justify-center gap-2 p-4">
+          <button className="border-sky-500  border-2 text-blue-gray-500 rounded px-3 py-1">
             Cancel
           </button>
-          <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded px-3 py-1">
+          <button className=" bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded px-3 py-1" onClick={submitt}>
             Submit
           </button>
         </div>
-         
-
-
-
-
-
-
-    </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default Editbook
+export default Editbook;

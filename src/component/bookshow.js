@@ -7,9 +7,9 @@ function Bookshow() {
         return (
             
           < div className="w-56 h-[96%] border-2 border-sky-500 rounded  mt-4 ml-4 " >
-            <div shadow={false} floated={false} className="h-15 w-15 pt-4 pb-4 pl-4 pr-4 ">
+            <div  className="h-15 w-15 pt-1 pb-1 pl-4 pr-4 ">
               <img
-                src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
+                src="https://m.media-amazon.com/images/I/61pDNU9qEGL._SL1360_.jpg"
                 alt="card-image"
                 className="h-full w-full object-cover"
               />
@@ -17,7 +17,7 @@ function Bookshow() {
             <div>
               <div className="mb-2 flex items-center justify-between">
                 <p color="blue-gray" className="font-medium ml-1">
-                  Apple AirPods
+                Can't Hurt Me
                 </p>
                 
               </div>
@@ -26,8 +26,7 @@ function Bookshow() {
                 color="gray"
                 className="font-normal opacity-75 ml-2"
               >
-                With plenty of talk and listen time, voice-activated Siri access, and
-                an available wireless charging case.
+                Master Your Mind and Defy the Odds
               </p>
             </div>
             <div className="pt-0 mb-2 flex items-center justify-between">
@@ -39,7 +38,7 @@ function Bookshow() {
                 Add to Cart
               </button>
               <p color="blue-gray" className="font-medium  pr-3">
-                  $95.00
+                  $20.00
             </p>
             </div>
            
