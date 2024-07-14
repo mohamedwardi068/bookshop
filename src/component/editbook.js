@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 
 function Editbook() {
-  const [submit, setSubmit] = useState("");
+ 
+
   const [submitr, setSubmitr] = useState("");
   const [submittt, setSubmittt] = useState("");
+  const [list, setList] = useState([]);
 
   const submitt = () => {
-    return console.log("submitting", submit, ";", submitr, ";", submittt);
+    return console.log("submitting", list, ";", submitr, ";", submittt);
   }
 
   const handlechange = (e) => {
-    setSubmit(e.target.value);
+    setList({...e.target.value});
   }
 
   const handlechangee = (e) => {
@@ -36,6 +38,7 @@ function Editbook() {
             placeholder="Price..."
             className="pl-1 pr-1 py-2 border-2 bg-transparent text-black rounded-lg w-full  border-blue-500"
             onChange={handlechangee}
+            
           />
           <input
             type="text"
