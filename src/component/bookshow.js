@@ -1,36 +1,33 @@
 import React, { useState } from 'react';
-import {
 
-  TEModal
-
-} from "tw-elements-react";
 import Editbook from './editbook';
 import Modal from 'react-modal';
+
 
 const customStyles = {
   content: {
     top: '50%',
     left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
+   
+    padding: '0',
+
+  
     transform: 'translate(-50%, -50%)',
   },
-};
-function Bookshow() {
-  const [showModal, setShowModal] = useState(false);
+};function Bookshow(title,price,description,image ,genre,author) {
+  
        
-  let subtitle;
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
     setIsOpen(true);
   }
 
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
-  }
+  // function afterOpenModal() {
+  //   // references are now sync'd and can be accessed.
+  //   subtitle.style.color = '#f00';
+  // }
 
   function closeModal() {
     setIsOpen(false);
@@ -38,11 +35,20 @@ function Bookshow() {
 
         return (
           <>
+             <Modal
+        isOpen={modalIsOpen}
+       // onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+   
+      >
+    <Editbook/>
+      </Modal>
             
           < div className="w-56 h-[96%] border-2 border-sky-500 rounded  mt-4 ml-4 " >
             <div  className="h-15 w-15 pt-1 pb-1 pl-4 pr-4 ">
               <img
-                src="https://m.media-amazon.com/images/I/61pDNU9qEGL._SL1360_.jpg"
+                src={image}
                 alt="card-image"
                 className="h-full w-full object-cover"
               />
@@ -50,7 +56,7 @@ function Bookshow() {
             <div>
               <div className="mb-2 flex items-center justify-between">
                 <p color="blue-gray" className="font-medium ml-1">
-                Can't Hurt Me
+                {title}
                 </p>
                 
               </div>
@@ -59,7 +65,7 @@ function Bookshow() {
                 color="gray"
                 className="font-normal opacity-75 ml-2"
               >
-                Master Your Mind and Defy the Odds
+                {description}
               </p>
             </div>
             <div className="pt-0 mb-2 flex items-center justify-between">
@@ -72,29 +78,12 @@ function Bookshow() {
                 Add to Cart
               </button>
               <p color="blue-gray" className="font-medium  pr-3">
-                  $20.00
+                  {price}
             </p>
             </div>
            
           </div>
-          <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
-        </form>
-      </Modal>
+       
 {/*             
       <div show={showModal} >
       <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="">

@@ -25,7 +25,7 @@ function Editbook() {
 
   return (
     <>
-      <div className="block items-center border-4 border-sky-500 rounded mt-7 h-[50%] w-[90%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[30%] mx-auto bg-cover bg-center" style={{ backgroundImage: 'url("https://media.istockphoto.com/id/470721440/vector/books-seamless-pattern.jpg?s=2048x2048&w=is&k=20&c=-o40Z7Vj8uC7kqfEEd-cOjAbFxTlM_ZWeYD8swN4Mp0=")' }}>
+      <div className="block items-center border-4 border-sky-500 rounded  h-full  w-full  bg-cover bg-center" style={{ backgroundImage: 'url("https://media.istockphoto.com/id/470721440/vector/books-seamless-pattern.jpg?s=2048x2048&w=is&k=20&c=-o40Z7Vj8uC7kqfEEd-cOjAbFxTlM_ZWeYD8swN4Mp0=")' }}>
         <div className='grid grid-cols-1 gap-4 p-5 bg-opacity-75 rounded'>
           <input
             type="text"
