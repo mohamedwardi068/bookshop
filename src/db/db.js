@@ -1,4 +1,5 @@
-const books = [
+
+export const books = [
     {
         title: "Can't Hurt Me",
         price: 30,

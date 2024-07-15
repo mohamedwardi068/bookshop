@@ -1,15 +1,17 @@
 
 //import react from "react";
 
-import Bookshow from "./component/bookshow";
+
 import Navbar  from "./component/navbar";
+
+import BookListt from "./component/bookList";
 
 const App=()=> {
 
   return (
     <>
     <Navbar/>
-   
+    <BookListt/>
     </>
     
   );
