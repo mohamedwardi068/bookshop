@@ -78,7 +78,7 @@ console.log("sconde ",test)
                 Add to Cart
               </button>
               <p color="blue-gray" className="font-medium  pr-3">
-                  {price}
+                  {price}$
             </p>
             </div>
            
