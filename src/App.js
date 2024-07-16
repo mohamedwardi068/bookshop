@@ -3,15 +3,18 @@
 
 
 import Navbar  from "./component/navbar";
+import Listbook from "./pages/listbook";
 
-import BookListt from "./component/bookList";
+
+
 
 const App=()=> {
 
   return (
     <>
     <Navbar/>
-    <BookListt/>
+
+    <Listbook/>
     </>
     
   );

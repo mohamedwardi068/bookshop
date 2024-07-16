@@ -1,6 +1,7 @@
 
 export const books = [
     {
+        id:1,
         title: "Can't Hurt Me",
         price: 30,
         genre: "Biography",
@@ -9,6 +10,7 @@ export const books = [
         img: "https://example.com/images/cant_hurt_me.jpg"
     },
     {
+        id:2,
         title: "To Kill a Mockingbird",
         price: 15,
         genre: "Fiction",
@@ -17,6 +19,7 @@ export const books = [
         img: "https://example.com/images/to_kill_a_mockingbird.jpg"
     },
     {
+        id:3,
         title: "1984",
         price: 20,
         genre: "Dystopian",
@@ -25,6 +28,7 @@ export const books = [
         img: "https://example.com/images/1984.jpg"
     },
     {
+        id:4,
         title: "The Great Gatsby",
         price: 10,
         genre: "Classic",
@@ -33,6 +37,7 @@ export const books = [
         img: "https://example.com/images/the_great_gatsby.jpg"
     },
     {
+        id:5,
         title: "Educated",
         price: 25,
         genre: "Memoir",

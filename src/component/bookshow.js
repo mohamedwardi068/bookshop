@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Editbook from './editbook';
+
 import Modal from 'react-modal';
 
 
@@ -14,10 +14,10 @@ const customStyles = {
   
     transform: 'translate(-50%, -50%)',
   },
-};function Bookshow(title,price,description,image ,genre,author) {
+};function Bookshow({title,price,description,image ,genre,author}) {
   
-       
-
+      const test={title,price,description,image ,genre,author}
+console.log("sconde ",test)
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {
@@ -42,7 +42,7 @@ const customStyles = {
         style={customStyles}
    
       >
-    <Editbook/>
+  {/* <Detailsbook/> */}
       </Modal>
             
           < div className="w-56 h-[96%] border-2 border-sky-500 rounded  mt-4 ml-4 " >
