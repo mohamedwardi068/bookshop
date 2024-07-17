@@ -16,8 +16,7 @@ const customStyles = {
   },
 };function Bookshow({title,price,description,image ,genre,author}) {
   
-      const test={title,price,description,image ,genre,author}
-console.log("sconde ",test)
+      
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {

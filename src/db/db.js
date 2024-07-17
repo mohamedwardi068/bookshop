@@ -7,7 +7,7 @@ export const books = [
         genre: "Biography",
         author: "David Goggins",
         description: "A memoir of a man who overcame numerous obstacles to achieve his goals.",
-        img: "https://example.com/images/cant_hurt_me.jpg"
+        img: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/05/Harry-Potter-Movies-in-Order.jpg?q=50&fit=crop&w=1100&h=618&dpr=1.5"
     },
     {
         id:2,

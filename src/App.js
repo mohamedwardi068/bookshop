@@ -3,6 +3,7 @@
 
 
 import Navbar  from "./component/navbar";
+import BookListt from "./component/Storybook";
 import Listbook from "./pages/listbook";
 
 
@@ -15,6 +16,7 @@ const App=()=> {
     <Navbar/>
 
     <Listbook/>
+    <BookListt/>
     </>
     
   );

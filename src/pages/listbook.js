@@ -2,7 +2,7 @@ import React from 'react'
 import Bookshow from '../component/bookshow'
 import { books } from '../db/db'
 function Listbook() {
-  console.log("first",books)
+ 
   return (
     <div >
             
