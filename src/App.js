@@ -3,7 +3,7 @@
 
 
 import Navbar  from "./component/navbar";
-import BookListt from "./component/Storybook";
+import BookListt from "./pages/Storybook";
 import Listbook from "./pages/listbook";
 
 

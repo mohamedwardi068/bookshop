@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { images } from '../db/promotiondb';
-import Imagescroll from './imagescroll'; 
+import Imagescroll from '../component/imagescroll'; 
 
 const BookListt = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
