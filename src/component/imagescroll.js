@@ -17,7 +17,7 @@ const Imagescroll = ({ url, originalPrice, salePrice, prevUrl, nextUrl }) => {
                         src={prevUrl}
                         alt="Previous Product"
                         className="max-w-full max-h-full object-contain opacity-25 absolute top-0 left-0"
-                        style={{ transform: 'translateX(-110%)' }} // Adjust position as needed
+                        style={{ transform: 'translateX(-110%)' }} 
                     />
                 )}
                 <img src={url} alt="Product" className="max-w-full max-h-full object-contain" />
@@ -26,7 +26,7 @@ const Imagescroll = ({ url, originalPrice, salePrice, prevUrl, nextUrl }) => {
                         src={nextUrl}
                         alt="Next Product"
                         className="max-w-full max-h-full object-contain opacity-25 absolute top-0 right-0"
-                        style={{ transform: 'translateX(110%)' }} // Adjust position as needed
+                        style={{ transform: 'translateX(110%)' }} 
                     />
                 )}
                 <div className="absolute bottom-2.5 right-2.5 bg-yellow-400 text-black px-3 py-2 rounded-lg font-bold text-lg flex flex-col items-center">

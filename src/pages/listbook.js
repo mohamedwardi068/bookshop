@@ -4,17 +4,17 @@ import { books } from '../db/db'
 function Listbook() {
  
   return (
-    <div >
+    <div  className='grid ml-3 gap-0 grid-cols-2 grid-rows-3  '>
             
         {books.map((book, index) => (
-      <div  key={index}>
+      <div  key={index} className='400px' >
         
         <Bookshow 
           
           title={book.title}
           price={book.price}
           description={book.description}
-          img={book.img} 
+          image={book.img} 
           genre={book.genre}
           author={book.author}
         /> 

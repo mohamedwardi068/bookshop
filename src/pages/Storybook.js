@@ -7,7 +7,7 @@ const BookListt = () => {
     const nextIndex = (currentIndex - 1 + images.length) % images.length; 
     const prevIndex = (currentIndex + 1) % images.length; 
     return (
-        <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col items-center w-full mt-6 mb-9">
             <Imagescroll
                 url={images[currentIndex].url}
                 originalPrice={images[currentIndex].originalPrice}
