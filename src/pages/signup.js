@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { FaFacebook, FaInstagram, FaTwitter, FaBars, FaPhone, FaEnvelope, FaUser } from 'react-icons/fa';
-
+import { useNavigate } from 'react-router-dom';
 const SignUp = () => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
+    const Navigate=useNavigate()
 
     return (
         <div className="flex h-screen">
@@ -27,9 +28,9 @@ const SignUp = () => {
                         <div className="text-3xl font-bold">Book Shop</div>
                     </div>
                     <div className="flex space-x-4 mt-4 items-center justify-center">
-                        <a href="#" className="text-2xl"><FaFacebook /></a>
-                        <a href="#" className="text-2xl"><FaTwitter /></a>
-                        <a href="#" className="text-2xl"><FaInstagram /></a>
+                        <a   className="text-2xl"><FaFacebook /></a>
+                        <a  className="text-2xl"><FaTwitter /></a>
+                        <a  className="text-2xl"><FaInstagram /></a>
                     </div>
                 </div>
             </div>
@@ -77,13 +78,13 @@ const SignUp = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-between mb-6">
-                        <a href="#" className="text-black"></a>
+                        <a  className="text-black"></a>
                         <button className="bg-blue-500 text-white py-2 px-4 rounded-lg w-[125px] h-[50px]">Next &gt;</button>
                     </div>
                     <hr className="my-5" />
                     <div className="flex items-center justify-between mb-6">
-                        <a href="#" className="text-black">Already have an account</a>
-                        <button className="text-blue-500 py-2 px-4 rounded">Login to your account</button>
+                        <a   className="text-black">Already have an account</a>
+                        <button className="text-blue-500 py-2 px-4 rounded" onClick={()=>{Navigate("/login")}}>Login to your account</button>
                     </div>
                 </div>
             </div>

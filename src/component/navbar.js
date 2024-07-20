@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Logo from './Logo/logo.png';
+import { useNavigate } from 'react-router-dom';
 function Navbar() {
   const [search,setSearch]=useState("")
+  const Navigate=useNavigate()
   
   const fct=()=> {
     return console.log("search",search)
@@ -26,11 +28,11 @@ function Navbar() {
           </button>
         </div>
         <div className="flex flex-nowrap gap-2">
-          <button className="border border-blue-gray-500 text-blue-gray-500 rounded px-3 py-1">
+          <button className="border border-blue-gray-500 text-blue-gray-500 rounded px-3 py-1" onClick={()=>{Navigate("/login")}}>
             Log In
           </button>
-          <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded px-3 py-1">
-            Sign In
+          <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded px-3 py-1" onClick={()=>{Navigate("/signup")}}>
+            Signup
           </button>
         </div>
       </div>

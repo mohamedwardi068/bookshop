@@ -4,7 +4,7 @@ import { books } from '../db/db'
 function Listbook() {
  
   return (
-    <div  className='grid ml-3 gap-0 grid-cols-2 grid-rows-3  '>
+    <div  className='grid ml-3 gap-0 grid-cols-3 grid-rows-2  '>
             
         {books.map((book, index) => (
       <div  key={index} className='400px' >

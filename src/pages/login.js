@@ -1,7 +1,8 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTwitter, FaBars } from 'react-icons/fa';
-
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
+  const Navigate=useNavigate()
   return (
     <div className="flex h-screen">
       <div
@@ -22,9 +23,9 @@ const Login = () => {
             <div className="text-3xl font-bold">Book Shop</div>
           </div>
           <div className="flex space-x-4 mt-4 items-center justify-center">
-            <a href="#" className="text-2xl "><FaFacebook /></a>
-            <a href="#" className="text-2xl"><FaTwitter /></a>
-            <a href="#" className="text-2xl"><FaInstagram /></a>
+            <a  className="text-2xl "><FaFacebook /></a>
+            <a  className="text-2xl"><FaTwitter /></a>
+            <a  className="text-2xl"><FaInstagram /></a>
           </div>
         </div>
       </div>
@@ -47,15 +48,15 @@ const Login = () => {
           </div>
           
           <div className="flex items-center justify-between mb-6">
-            <a href="#" className="text-black">Login to a different account</a>
-            <button className="bg-blue-500 text-white py-2 px-4 font-bold rounded-lg">Login  &gt;</button>
+            <a  className="text-black">Login to a different account</a>
+            <button className="bg-blue-500 text-white py-2 px-4 font-bold rounded-lg" onClick={()=>{Navigate("/login")}}>Login  &gt;</button>
           </div>
 
           <hr className="my-5" />
 
           <div className="flex items-center justify-between mb-6">
-            <a href="#" className="text-black ">Don’t have an account?</a>
-            <button className="text-blue-500 py-2 px-4 rounded font-bold">Sign up</button>
+            <a  className="text-black ">Don’t have an account?</a>
+            <button className="text-blue-500 py-2 px-4 rounded font-bold" onClick={()=>{Navigate("/signup")}}>Sign up</button>
           </div>
           
         </div>
