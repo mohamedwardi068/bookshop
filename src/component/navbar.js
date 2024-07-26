@@ -3,19 +3,6 @@ import Logo from './Logo/logo.png';
 import { useNavigate } from 'react-router-dom';
 import { getBooks,storyy} from '../Api/api';
 function Navbar() {
-  const [response,setresponse]=useState("")
-  try{
-    useEffect(()=>{
-      const getbook=async()=>{
-        const reponse=await getBooks()
-        setresponse(reponse)
-        return reponse.data
-      }
-      getbook()
-  },[])}
-    catch{
-        console.log('Apierreur::',console.error())
-    }
 
   const [search,setSearch]=useState("")
   const Navigate=useNavigate()

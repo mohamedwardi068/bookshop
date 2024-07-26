@@ -6,8 +6,8 @@ const calculateDiscountPercentage = (originalPrice, salePrice) => {
     return discountPercentage;
 };
 
-const Imagescroll = ({ url, originalPrice, salePrice, prevUrl, nextUrl }) => {
-    const discountPercentage = calculateDiscountPercentage(originalPrice, salePrice);
+const Imagescroll = ({ url, prevUrl, nextUrl }) => {
+    //const discountPercentage = calculateDiscountPercentage(originalPrice, salePrice);
 
     return (
         <div className="relative max-w-xl mx-auto">
@@ -29,13 +29,13 @@ const Imagescroll = ({ url, originalPrice, salePrice, prevUrl, nextUrl }) => {
                         style={{ transform: 'translateX(110%)' }} 
                     />
                 )}
-                <div className="absolute bottom-2.5 right-2.5 bg-yellow-400 text-black px-3 py-2 rounded-lg font-bold text-lg flex flex-col items-center">
+                {/* <div className="absolute bottom-2.5 right-2.5 bg-yellow-400 text-black px-3 py-2 rounded-lg font-bold text-lg flex flex-col items-center">
                     <span className="line-through mr-1">${originalPrice}</span>
                     <span className="text-red-600 font-bold">${salePrice}</span>
                     <div className="bg-red-600 text-white rounded-full w-6 h-6 flex justify-center items-center text-xs absolute top-[-0.9375rem] left-[-0.9375rem]">
                         {discountPercentage}%
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );
