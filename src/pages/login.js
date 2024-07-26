@@ -39,7 +39,7 @@ const Login = () => {
                 <img
                   src="https://i.pinimg.com/474x/98/51/1e/98511ee98a1930b8938e42caf0904d2d.jpg"
                   alt="Avatar"
-                  className="w-10 h-10 rounded-full mr-4"
+                  className="w-5 h-5 rounded-full mr-4"
                 />
                 <span>Welcome back, <strong>Hamid</strong></span>
               </div>

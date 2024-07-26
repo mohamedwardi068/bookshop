@@ -1,22 +1,39 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import Bookshow from '../component/bookshow'
-import { books } from '../db/db'
+
+import { storyy } from '../Api/api';
+
 function Listbook() {
- 
+  const [storyyy,setstory]=useState([])
+  try{
+    useEffect(()=>{
+      const getstoryy=async()=>{
+        const reponse=await storyy()
+       
+
+        setstory(reponse)
+        
+        return reponse
+      }
+      getstoryy()
+  },[])}
+    catch{
+        console.log('Apierreur::',console.error())
+    }
+  
   return (
     <div  className='grid ml-3 gap-0 grid-cols-3 grid-rows-2  '>
             
-        {books.map((book, index) => (
+        {storyyy.map((book, index) => (
       <div  key={index} className='400px' >
         
         <Bookshow 
           
-          title={book.title}
-          price={book.price}
-          description={book.description}
-          image={book.img} 
-          genre={book.genre}
-          author={book.author}
+          title={book.name}
+          price={book.id}
+          description={book.createdAt}
+          image={book.avatar} 
+         
         /> 
 
       </div>
