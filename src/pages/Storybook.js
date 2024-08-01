@@ -1,28 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { images } from '../db/promotiondb';
+import React, {  useState } from 'react';
+
 import Imagescroll from '../component/imagescroll'; 
-import { getBooks } from '../Api/api';
+import { useapi } from '../context/apiContext';
+
 
 const BookListt = () => {
-    const [response,setresponse]=useState([])
-    useEffect(()=>{
-        const getbook=async()=>{
-            try{
-          const reponse=await getBooks()
-           await setresponse(reponse)
-          console.log("second",reponse)
-          return reponse
-        }
-        catch{
-            console.log('Apierreur::',console.error())
-        }
-    
-    };
-    getbook()
-}
-    ,[])
-    
-     console.log("first",response.array)
+   
+    const {response} = useapi()
+     
      const [currentIndex, setCurrentIndex] = useState(0);
     const nextIndex = (currentIndex - 1 + response.length) % response.length; 
     const prevIndex = (currentIndex + 1) % response.length; 

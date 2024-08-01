@@ -9,6 +9,7 @@ import Listbook from "./pages/listbook";
 import Login from "./pages/login";
 
 import Signup from "./pages/signup";
+import Newlogin from "./pages/newLogin";
 
 
 
@@ -28,6 +29,7 @@ const App=()=> {
         
         <Routes >
         <Route index element={<><Navbar/><BookListt/><Listbook/></>}/>
+        <Route path="/newlogin" element={<Newlogin/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<Signup/>}/>
 

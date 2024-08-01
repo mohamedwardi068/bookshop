@@ -1,7 +1,9 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTwitter, FaBars } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { useauth } from '../context/authContext';
 const Login = () => {
+  const {user,login} = useauth()
   const Navigate=useNavigate()
   return (
     <div className="flex h-screen">
@@ -49,7 +51,7 @@ const Login = () => {
           
           <div className="flex items-center justify-between mb-6">
             <a  className="text-black">Login to a different account</a>
-            <button className="bg-blue-500 text-white py-2 px-4 font-bold rounded-lg" onClick={()=>{Navigate("/login")}}>Login  &gt;</button>
+            <button className="bg-blue-500 text-white py-2 px-4 font-bold rounded-lg" onClick={()=>{Navigate("/newlogin")}}>Login  &gt;</button>
           </div>
 
           <hr className="my-5" />

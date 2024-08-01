@@ -30,7 +30,7 @@ function Navbar() {
           </button>
         </div>
         <div className="flex flex-nowrap gap-2">
-          <button className="border border-blue-gray-500 text-blue-gray-500 rounded px-3 py-1" onClick={()=>{Navigate("/login")}}>
+          <button className="border border-blue-gray-500 text-blue-gray-500 rounded px-3 py-1" onClick={()=>{Navigate("/newlogin")}}>
             Log In
           </button>
           <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded px-3 py-1" onClick={()=>{Navigate("/signup")}}>

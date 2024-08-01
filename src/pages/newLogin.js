@@ -1,24 +1,11 @@
 import React, { useState } from 'react';
-import { FaFacebook, FaInstagram, FaTwitter, FaBars, FaPhone, FaEnvelope, FaUser, FaLock } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter, FaBars, FaUser, FaLock } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import { useauth } from '../context/authContext';
 
-const SignUp = () => {
-    const [name, setName] = useState('');
-    const [phone, setPhone] = useState('');
-    const [email, setEmail] = useState('');
+const NewLogin = () => {
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
-    const { signup } = useauth();
-
-    const handleSignUp = async () => {
-        try {
-            await signup(email, password, phone);
-            navigate('/login');
-        } catch (error) {
-            console.error('Signup Error:', error);
-        }
-    };
 
     return (
         <div className="flex h-screen">
@@ -48,7 +35,7 @@ const SignUp = () => {
             </div>
             <div className="w-1/2 flex items-center justify-center">
                 <div className="w-3/4">
-                    <h1 className="text-3xl mb-6">Sign Up</h1>
+                    <h1 className="text-3xl mb-6">Login</h1>
                     <p className="mb-4">Please fill your information below</p>
                     <div className="mb-4 relative">
                         <div className="flex items-center p-4 border rounded relative transition-all duration-300 border-gray-300 focus-within:border-blue-600 focus-within:shadow-outline-blue">
@@ -57,39 +44,13 @@ const SignUp = () => {
                                 type="text"
                                 placeholder=" "
                                 className="w-full border-none outline-none"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
                             />
-                            <label className={`absolute left-10 transform transition-all duration-300 ${name ? '-translate-y-6 text-sm' : 'translate-y-0 text-base text-gray-500'}`}>Name</label>
+                            <label className={`absolute left-10 transform transition-all duration-300 ${username ? '-translate-y-6 text-sm' : 'translate-y-0 text-base text-gray-500'}`}>Username</label>
                         </div>
                     </div>
                     <div className="mb-4 relative">
-                        <div className="flex items-center p-4 border rounded relative transition-all duration-300 border-gray-300 focus-within:border-blue-600 focus-within:shadow-outline-blue">
-                            <FaPhone className="text-gray-500 mr-4" />
-                            <input
-                                type="text"
-                                placeholder=" "
-                                className="w-full border-none outline-none"
-                                value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
-                            />
-                            <label className={`absolute left-10 transform transition-all duration-300 ${phone ? '-translate-y-6 text-sm' : 'translate-y-0 text-base text-gray-500'}`}>Mobile number</label>
-                        </div>
-                    </div>
-                    <div className="mb-4 relative">
-                        <div className="flex items-center p-4 border rounded relative transition-all duration-300 border-gray-300 focus-within:border-blue-600 focus-within:shadow-outline-blue">
-                            <FaEnvelope className="text-gray-500 mr-4" />
-                            <input
-                                type="email"
-                                placeholder=" "
-                                className="w-full border-none outline-none"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
-                            <label className={`absolute left-10 transform transition-all duration-300 ${email ? '-translate-y-6 text-sm' : 'translate-y-0 text-base text-gray-500'}`}>E-mail</label>
-                        </div>
-                    </div>
-                    <div className="mb-6 relative">
                         <div className="flex items-center p-4 border rounded relative transition-all duration-300 border-gray-300 focus-within:border-blue-600 focus-within:shadow-outline-blue">
                             <FaLock className="text-gray-500 mr-4" />
                             <input
@@ -103,17 +64,18 @@ const SignUp = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-between mb-6">
-                        <button className="bg-blue-500 text-white py-2 px-4 rounded-lg w-[125px] h-[50px]" onClick={handleSignUp}>Next &gt;</button>
+                        <a className="text-black"></a>
+                        <button className="bg-blue-500 text-white py-2 px-4 rounded-lg w-[125px] h-[50px]">Next &gt;</button>
                     </div>
                     <hr className="my-5" />
                     <div className="flex items-center justify-between mb-6">
-                        <a className="text-black">Already have an account</a>
-                        <button className="text-blue-500 py-2 px-4 rounded" onClick={() => { navigate("/login") }}>Login to your account</button>
-                    </div>
+            <a  className="text-black ">Don’t have an account?</a>
+            <button className="text-blue-500 py-2 px-4 rounded font-bold" onClick={()=>{navigate("/signup")}}>Sign up</button>
+          </div>
                 </div>
             </div>
         </div>
     );
 }
 
-export default SignUp;
+export default NewLogin;

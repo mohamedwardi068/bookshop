@@ -4,7 +4,7 @@ import Bookshow from '../component/bookshow'
 import { storyy } from '../Api/api';
 
 function Listbook() {
-  const [storyyy,setstory]=useState([])
+   const [storyyy,setstory]=useState([])
   try{
     useEffect(()=>{
       const getstoryy=async()=>{
