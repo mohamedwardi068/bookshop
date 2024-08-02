@@ -15,8 +15,8 @@ return res
 
 }
 
-export const signUp = async (email, password,phonenbr) => {
-  const resultat = await account.create(email, password,phonenbr);
+export const signUp = async (name,phone,email, password ) => {
+  const resultat = await account.create(name,phone,email, password);
   return resultat;
 };
     

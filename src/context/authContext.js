@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext,  useState } from "react";
 
 import { Loginn, signUp } from "../appwrite/apiappwrite";
 const authContext = createContext()
@@ -18,9 +18,9 @@ export const AuthProvider = ({ children }) => {
             }
         
         };
-        const signup = async (email, password,phonenbr) => {
+        const signup = async (name,phone,email, password) => {
             try {
-                const response = await signUp(email, password,phonenbr);
+                const response = await signUp(name,phone,email, password);
                await setuser(response)
               
                 return response;
