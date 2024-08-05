@@ -1,6 +1,6 @@
 import React, { createContext, useContext,  useState } from "react";
+import { Loginn, signUp } from "../appwrite/firebase";
 
-import { Loginn, signUp } from "../appwrite/apiappwrite";
 const authContext = createContext()
 export const AuthProvider = ({ children }) => {
 
@@ -8,13 +8,15 @@ export const AuthProvider = ({ children }) => {
 
             const login=async(email,password)=>{
                 try{
+                    console.log("ttfirst",password)
               const reponse=await Loginn(email,password)
+              
                await setuser(reponse)
     
               return reponse
             }
             catch{
-                console.log('Apierreur::',console.error())
+                console.log('logerreur::',console.error())
             }
         
         };
